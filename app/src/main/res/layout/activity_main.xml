@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.edgarzavala.youtubeexoplayer.MainActivity">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        app:layout_aspectRatio="100%"
+        app:layout_widthPercent="100%">
+
+        <xyz.edgarzavala.youtubeexoplayer.YTPlayerView
+            android:id="@+id/main.yt_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/main.replay_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Replay" />
+
+    <ToggleButton
+        android:id="@+id/main.mute_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:text="Mute"
+        android:textOff="Mute"
+        android:textOn="Unmute" />
+
+    <Button
+        android:id="@+id/main.button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:onClick="onClick"
+        android:text="Click me!!" />
+</android.support.percent.PercentRelativeLayout>
